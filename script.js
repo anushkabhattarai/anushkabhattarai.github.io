@@ -1,8 +1,9 @@
 /* ========================================
-   Portfolio JS — Clean & Minimal
+   Portfolio JS — Advanced
    ======================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
+
     // --- Navbar scroll ---
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
@@ -12,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Mobile menu ---
     const navToggle = document.getElementById('nav-toggle');
     const navMenu = document.getElementById('nav-menu');
-
     navToggle.addEventListener('click', () => {
         navMenu.classList.toggle('open');
         navToggle.classList.toggle('active');
@@ -22,78 +22,76 @@ document.addEventListener('DOMContentLoaded', () => {
             spans[1].style.opacity = '0';
             spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
         } else {
-            spans[0].style.transform = 'none';
-            spans[1].style.opacity = '1';
-            spans[2].style.transform = 'none';
+            spans[0].style.transform = '';
+            spans[1].style.opacity = '';
+            spans[2].style.transform = '';
         }
     });
-
-    // Close menu on link click
     document.querySelectorAll('.nav-link, .nav-cta').forEach(link => {
         link.addEventListener('click', () => {
             navMenu.classList.remove('open');
             navToggle.classList.remove('active');
-            const spans = navToggle.querySelectorAll('span');
-            spans.forEach(s => { s.style.transform = 'none'; s.style.opacity = '1'; });
+            navToggle.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
         });
     });
 
     // --- Active nav on scroll ---
-    const sections = document.querySelectorAll('.section, .hero');
+    const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
-
-    function updateActiveLink() {
+    function updateActive() {
         let current = '';
-        const scrollPos = window.scrollY + 120;
-        sections.forEach(section => {
-            if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
-                current = section.getAttribute('id');
-            }
+        sections.forEach(s => {
+            if (window.scrollY + 120 >= s.offsetTop) current = s.id;
         });
-        navLinks.forEach(link => {
-            link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
-        });
+        navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === `#${current}`));
     }
-    window.addEventListener('scroll', updateActiveLink, { passive: true });
-    updateActiveLink();
+    window.addEventListener('scroll', updateActive, { passive: true });
+    updateActive();
 
-    // --- Scroll animations (Intersection Observer) ---
-    const animTargets = [
-        ...document.querySelectorAll('.section-header'),
-        ...document.querySelectorAll('.about-text'),
-        ...document.querySelectorAll('.about-skills'),
-        ...document.querySelectorAll('.timeline-item'),
-        ...document.querySelectorAll('.project-card'),
-        ...document.querySelectorAll('.edu-card'),
-        ...document.querySelectorAll('.cert-card'),
-        ...document.querySelectorAll('.contact-card'),
-    ];
+    // --- Typewriter ---
+    const tw = document.getElementById('typewriter');
+    const phrases = ['clear insights.', 'smarter decisions.', 'strategic value.', 'compelling stories.'];
+    let pi = 0, ci = 0, deleting = false;
+    function type() {
+        const phrase = phrases[pi];
+        tw.textContent = phrase.substring(0, deleting ? --ci : ++ci);
+        let delay = deleting ? 48 : 88;
+        if (!deleting && ci === phrase.length) { delay = 2000; deleting = true; }
+        else if (deleting && ci === 0) { deleting = false; pi = (pi + 1) % phrases.length; delay = 380; }
+        setTimeout(type, delay);
+    }
+    setTimeout(type, 1200);
 
-    animTargets.forEach(el => el.classList.add('animate-on-scroll'));
-
+    // --- Scroll animations ---
+    const animEls = document.querySelectorAll('.anim');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const parent = entry.target.parentElement;
-                if (parent) {
-                    const siblings = Array.from(parent.children).filter(c => c.classList.contains('animate-on-scroll'));
-                    const i = siblings.indexOf(entry.target);
-                    setTimeout(() => entry.target.classList.add('visible'), Math.max(0, i) * 80);
-                } else {
-                    entry.target.classList.add('visible');
-                }
-                observer.unobserve(entry.target);
-            }
+            if (!entry.isIntersecting) return;
+            const parent = entry.target.parentElement;
+            const siblings = parent ? [...parent.children].filter(c => c.classList.contains('anim')) : [];
+            const idx = siblings.indexOf(entry.target);
+            setTimeout(() => entry.target.classList.add('visible'), Math.max(0, idx) * 90);
+            observer.unobserve(entry.target);
         });
-    }, { rootMargin: '0px 0px -60px 0px', threshold: 0.05 });
+    }, { rootMargin: '0px 0px -55px 0px', threshold: 0.06 });
+    animEls.forEach(el => observer.observe(el));
 
-    animTargets.forEach(el => observer.observe(el));
+    // --- Hero photo parallax tilt ---
+    const heroCenter = document.querySelector('.hero-center');
+    if (heroCenter) {
+        document.addEventListener('mousemove', e => {
+            const x = (e.clientX / window.innerWidth - 0.5) * 12;
+            const y = (e.clientY / window.innerHeight - 0.5) * 12;
+            heroCenter.style.transform = `perspective(900px) rotateY(${x}deg) rotateX(${-y}deg)`;
+        });
+        document.addEventListener('mouseleave', () => { heroCenter.style.transform = ''; });
+    }
 
-    // --- Smooth scroll for anchor links ---
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+    // --- Smooth scroll ---
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const target = document.querySelector(a.getAttribute('href'));
             if (target) {
                 const offset = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h')) || 64;
                 window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
@@ -101,28 +99,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- Image error fallback ---
-    const heroPhoto = document.getElementById('hero-photo');
-    if (heroPhoto) {
-        heroPhoto.addEventListener('error', () => {
-            heroPhoto.style.display = 'none';
-            const parent = heroPhoto.parentElement;
-            parent.style.background = 'linear-gradient(135deg, #6366f1, #10b981)';
-            parent.style.display = 'flex';
-            parent.style.alignItems = 'center';
-            parent.style.justifyContent = 'center';
-            const initials = document.createElement('span');
-            initials.textContent = 'AB';
-            initials.style.cssText = 'font-size:1.4rem;font-weight:800;color:white;';
-            parent.appendChild(initials);
+    // --- Photo fallback ---
+    const photo = document.getElementById('hero-photo');
+    if (photo) {
+        photo.addEventListener('error', () => {
+            photo.style.display = 'none';
+            const p = photo.parentElement;
+            p.style.cssText += 'background:linear-gradient(135deg,#6366f1,#10b981);display:flex;align-items:center;justify-content:center;';
+            const s = document.createElement('span');
+            s.textContent = 'AB';
+            s.style.cssText = 'font-size:2.2rem;font-weight:900;color:white;letter-spacing:-1px';
+            p.appendChild(s);
         });
     }
 
-    // --- Lazy images fade-in ---
+    // --- Lazy image fade ---
     document.querySelectorAll('img[loading="lazy"]').forEach(img => {
         if (img.complete) return;
-        img.style.opacity = '0';
-        img.style.transition = 'opacity .5s ease';
+        img.style.cssText = 'opacity:0;transition:opacity .5s ease';
         img.addEventListener('load', () => { img.style.opacity = '1'; });
     });
 
