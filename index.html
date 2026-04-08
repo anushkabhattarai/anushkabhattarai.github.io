@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anushka Bhattarai | Data & Business Analytics Portfolio</title>
+    <meta name="description" content="Portfolio of Anushka Bhattarai - Data & Business Analytics professional skilled in Python, SQL, Power BI, and Excel. Turning data into strategy.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#home" class="nav-logo">
+                <span class="nav-logo-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                </span>
+                Anushka Bhattarai
+            </a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#certificates" class="nav-link">Certificates</a></li>
+            </ul>
+            <a href="#contact" class="nav-cta">Get In Touch</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section — Centered -->
+    <section class="hero" id="home">
+        <div class="hero-inner">
+            <span class="hero-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                Data Analytics Professional
+            </span>
+            <h1 class="hero-heading">
+                Turning Data Into<br><span class="hero-highlight">Strategic Insights</span>
+            </h1>
+            <p class="hero-description">
+                I'm Anushka Bhattarai — a business & data analytics professional skilled in Python, SQL, Power BI, and Excel. I transform complex datasets into clear, actionable insights that drive smarter decisions.
+            </p>
+            <div class="hero-actions">
+                <a href="https://docs.google.com/document/d/17A2_xgqJBBLPOXEH2Zjo1R5fbSIiln_kePTWA_uhF0w/edit?usp=sharing" target="_blank" rel="noopener" class="btn btn-primary" id="resume-btn">
+                    View Resume
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="#projects" class="btn btn-ghost" id="projects-btn">Learn More</a>
+            </div>
+            <div class="hero-avatars">
+                <div class="hero-avatar-group">
+                    <div class="hero-avatar">
+                        <img src="https://anneushka.my.canva.site/portfolio/_assets/media/0d10ddf9e8c9fffe2494fe7f8047a974.jpg" alt="Anushka Bhattarai" id="hero-photo">
+                    </div>
+                </div>
+                <div class="hero-social">
+                    <a href="https://www.linkedin.com/in/anushka-bhattarai-789aa5238/" target="_blank" rel="noopener" class="hero-social-link" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                    <a href="https://github.com/anushkabhattarai" target="_blank" rel="noopener" class="hero-social-link" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                    </a>
+                    <a href="mailto:anneushka017@gmail.com" class="hero-social-link" aria-label="Email">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <!-- Skills bar -->
+            <div class="hero-skills">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">Power BI</span>
+                <span class="skill-tag">Excel</span>
+                <span class="skill-tag">PostgreSQL</span>
+                <span class="skill-tag">Data Visualization</span>
+                <span class="skill-tag">EDA</span>
+                <span class="skill-tag">Machine Learning</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">About Me</span>
+                <h2 class="section-title">Get to Know Me</h2>
+                <p class="section-desc">A data and business analytics professional with a background in Computer Science</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p class="about-lead">I am a data and business analytics professional with a background in Computer Science and a strong interest in turning data into strategy.</p>
+                    <p>Skilled in Python, SQL, Excel, and Power BI, I specialize in transforming raw datasets into actionable insights and clear visualizations. My focus is on solving complex problems, simplifying information for decision-makers, and driving smarter, data-informed outcomes.</p>
+                    <p>I'd love the chance to work with your team and help make sense of your data to support smarter decisions.</p>
+                </div>
+                <div class="about-skills">
+                    <h3>Core Competencies</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                            </div>
+                            <h4>Data Analysis</h4>
+                            <p>Python, Pandas, NumPy</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                            </div>
+                            <h4>Visualization</h4>
+                            <p>Power BI, Matplotlib</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7V4h16v3M9 20h6M12 4v16"/></svg>
+                            </div>
+                            <h4>Database</h4>
+                            <p>SQL, PostgreSQL</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 10h16M10 4v16"/></svg>
+                            </div>
+                            <h4>Spreadsheets</h4>
+                            <p>Excel, Google Sheets</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section section-alt" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Career</span>
+                <h2 class="section-title">Professional Experience</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge">Current Role</div>
+                        <h3>X INFIN CONSULTANTS</h3>
+                        <p class="timeline-role">Data Analyst</p>
+                        <p class="timeline-desc">Working on data-driven consulting projects, transforming complex datasets into strategic business insights and delivering actionable recommendations to clients.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge">Oct 2025 – Dec 2025</div>
+                        <h3>Daraz</h3>
+                        <p class="timeline-role">Associate QA & Training</p>
+                        <p class="timeline-desc">Conduct data quality checks and performance reporting to ensure consistency and accuracy in training and seller-facing operations. Analyze feedback and operational metrics to identify process gaps and recommend improvements.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Herald College Kathmandu</h3>
+                        <p class="timeline-role">Community Leader</p>
+                        <p class="timeline-desc">Led a vibrant community of creators, organizing projects and mentoring members. Guided workshops where beginners grew into confident presenters, which made the experience truly rewarding.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Portfolio</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-desc">Every dataset tells a story. Let's dive into mine and discover how I bring data to life!</p>
+            </div>
+            <div class="projects-grid">
+                <article class="project-card" id="project-sales-forecasting">
+                    <div class="project-image">
+                        <img src="https://anneushka.my.canva.site/portfolio/_assets/media/4706e689139d8508f02ac5a3b77e79e0.png" alt="Sales Forecasting Dashboard" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://github.com/anushkabhattarai/Data-Analysis-Portfolio/tree/main/SuperStore%20Sales%20Data" target="_blank" rel="noopener" class="project-link">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                                View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tech">Power BI</span>
+                        <h3>Sales Forecasting using Time Series Analysis</h3>
+                        <p>This project focuses on building an interactive and insightful sales dashboard using Power BI. The data was sourced from an ecommerce store operating across India, revealing patterns in sales, profit, and delivery trends.</p>
+                    </div>
+                </article>
+                <article class="project-card" id="project-stayfactor">
+                    <div class="project-image">
+                        <img src="https://anneushka.my.canva.site/portfolio/_assets/media/1cd30a816116c1308ad1b74c94609d9b.png" alt="HR Analytics Dashboard" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://github.com/anushkabhattarai/Data-Analysis-Portfolio/tree/main/HR%20Analytics%20Dashboard" target="_blank" rel="noopener" class="project-link">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                                View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tech">Power BI</span>
+                        <h3>StayFactor: Understanding What Keeps Employees</h3>
+                        <p>This project aims to help organizations reduce employee attrition and improve workforce productivity. By analyzing HR data using Power BI, the dashboard provides insights into key factors affecting retention.</p>
+                    </div>
+                </article>
+                <article class="project-card" id="project-used-car">
+                    <div class="project-image">
+                        <img src="https://anneushka.my.canva.site/portfolio/_assets/media/0b4c0c042460d6db1ad161e5dcf4e921.png" alt="Used Car Price Prediction" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://github.com/anushkabhattarai/Data-Analysis-Portfolio/tree/main/Used%20Car%20Price" target="_blank" rel="noopener" class="project-link">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                                View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tech">Python + EDA</span>
+                        <h3>Predicting Used Car Prices with Linear Regression</h3>
+                        <p>This project analyzes a dataset of used cars to explore how various features impact their prices. The goal is to understand relationships between car characteristics like engine size and mileage with pricing.</p>
+                    </div>
+                </article>
+                <article class="project-card" id="project-diwali">
+                    <div class="project-image">
+                        <img src="https://anneushka.my.canva.site/portfolio/_assets/media/7f47ceb16f7926d403f07769ff8779e3.png" alt="Diwali Sales Analysis" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://github.com/anushkabhattarai/Data-Analysis-Portfolio/tree/main/Diwali%20Sales%20Analysis" target="_blank" rel="noopener" class="project-link">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                                View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tech">Python + EDA</span>
+                        <h3>Analyzing Customer Purchase Behavior During Diwali Sales</h3>
+                        <p>This project explores customer purchase behavior during the Diwali festival using a dataset of over 11,000 retail transactions. The goal was to clean and analyze the data to uncover consumer insights.</p>
+                    </div>
+                </article>
+                <article class="project-card" id="project-videogame">
+                    <div class="project-image">
+                        <img src="https://anneushka.my.canva.site/portfolio/_assets/media/d0523f050de69841199fc72395a68c04.png" alt="Video Game Database" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://github.com/anushkabhattarai/Data-Analysis-Portfolio/tree/main/Video%20Game%20Character%20Database%20%E2%80%93%20PostgreSQL%20Project" target="_blank" rel="noopener" class="project-link">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                                View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tech">PostgreSQL + RDBMS</span>
+                        <h3>Video Game Character Relational Database Design</h3>
+                        <p>This project is a relational database built using PostgreSQL that stores and manages information about video game characters. It covers fundamental concepts of relational database design.</p>
+                    </div>
+                </article>
+                <article class="project-card" id="project-ecommerce">
+                    <div class="project-image">
+                        <img src="https://anneushka.my.canva.site/portfolio/_assets/media/06ffa59ecfea1474ed02c7ee98b1af97.png" alt="E-Commerce Dashboard" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://github.com/anushkabhattarai/Data-Analysis-Portfolio/tree/main/E-commerce%20Sales%20Dashboard" target="_blank" rel="noopener" class="project-link">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                                View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tech">Power BI</span>
+                        <h3>E-Commerce Sales Performance Dashboard</h3>
+                        <p>This project focuses on analyzing the sales performance of an e-commerce store across India. Using Power BI, I developed an interactive dashboard that provides a clear view of key performance indicators.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section section-alt" id="education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Background</span>
+                <h2 class="section-title">Education & Awards</h2>
+            </div>
+            <div class="education-grid">
+                <div class="edu-card" id="edu-wolverhampton">
+                    <div class="edu-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                    </div>
+                    <div class="edu-details">
+                        <h3>University of Wolverhampton</h3>
+                        <p class="edu-degree">BSc (Hons) Computer Science — First Class Honours</p>
+                        <p class="edu-location">Herald College Kathmandu / Wolverhampton, UK</p>
+                        <p class="edu-date">November 2022 – December 2025</p>
+                    </div>
+                </div>
+                <div class="edu-card award-card" id="award-community-leader">
+                    <div class="edu-icon award-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                    </div>
+                    <div class="edu-details">
+                        <h3>Community Leadership Award</h3>
+                        <p class="edu-degree">Herald College Kathmandu</p>
+                        <p class="edu-desc">Led a vibrant community of creators, organizing projects and mentoring members. Guided workshops where beginners grew into confident presenters.</p>
+                    </div>
+                </div>
+                <div class="edu-card award-card" id="award-community-challenge">
+                    <div class="edu-icon award-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5C7 4 7 7 7 7M18 9h1.5a2.5 2.5 0 0 0 0-5C17 4 17 7 17 7"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+                    </div>
+                    <div class="edu-details">
+                        <h3>Annual Community Challenge Award</h3>
+                        <p class="edu-degree">2nd Place out of 8 Communities</p>
+                        <p class="edu-desc">Achieved 2nd place in a highly competitive inter-community challenge. Led workshops, hosted impactful events, and drove collaboration that set us apart for creativity, innovation, and teamwork.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section class="section" id="certificates">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Credentials</span>
+                <h2 class="section-title">Licenses & Certificates</h2>
+            </div>
+            <div class="certificates-grid">
+                <div class="cert-card" id="cert-sql-data-science">
+                    <div class="cert-logo"><span class="cert-logo-text">UC Davis</span></div>
+                    <div class="cert-info">
+                        <h3>SQL for Data Science</h3>
+                        <p class="cert-issuer">University of California, Davis</p>
+                        <p class="cert-date">September 2025</p>
+                    </div>
+                </div>
+                <div class="cert-card" id="cert-data-analysis-ibm">
+                    <div class="cert-logo"><span class="cert-logo-text ibm">IBM</span></div>
+                    <div class="cert-info">
+                        <h3>Data Analysis With Python</h3>
+                        <p class="cert-issuer">IBM</p>
+                        <p class="cert-date">July 2025</p>
+                        <a href="https://www.coursera.org/account/accomplishments/verify/CEAQ57TGR9TB" target="_blank" rel="noopener" class="cert-link">View Certificate →</a>
+                    </div>
+                </div>
+                <div class="cert-card" id="cert-intro-data-analytics">
+                    <div class="cert-logo"><span class="cert-logo-text ibm">IBM</span></div>
+                    <div class="cert-info">
+                        <h3>Introduction to Data Analytics</h3>
+                        <p class="cert-issuer">IBM</p>
+                        <p class="cert-date">June 2025</p>
+                        <a href="https://www.coursera.org/account/accomplishments/verify/A76YDPMN6XZ5" target="_blank" rel="noopener" class="cert-link">View Certificate →</a>
+                    </div>
+                </div>
+                <div class="cert-card" id="cert-fcc-python">
+                    <div class="cert-logo"><span class="cert-logo-text fcc">fCC</span></div>
+                    <div class="cert-info">
+                        <h3>Data Analysis With Python</h3>
+                        <p class="cert-issuer">FreeCodeCamp</p>
+                        <p class="cert-date">June 2025</p>
+                        <a href="https://www.freecodecamp.org/certification/AnushkaBhattarai/data-analysis-with-python-v7" target="_blank" rel="noopener" class="cert-link">View Certificate →</a>
+                    </div>
+                </div>
+                <div class="cert-card" id="cert-nobel">
+                    <div class="cert-logo"><span class="cert-logo-text nobel">Nobel</span></div>
+                    <div class="cert-info">
+                        <h3>Certificate of Completion</h3>
+                        <p class="cert-issuer">Nobel Learning PBC</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section section-alt" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Contact</span>
+                <h2 class="section-title">Let's Connect</h2>
+                <p class="section-desc">I'd love the chance to work with your team and help make sense of your data to support smarter decisions</p>
+            </div>
+            <div class="contact-grid">
+                <a href="https://www.linkedin.com/in/anushka-bhattarai-789aa5238/" target="_blank" rel="noopener" class="contact-card" id="contact-linkedin">
+                    <div class="contact-icon linkedin-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </div>
+                    <h3>LinkedIn</h3>
+                    <p>linkedin.com/in/anushka-bhattarai/</p>
+                </a>
+                <a href="https://github.com/anushkabhattarai" target="_blank" rel="noopener" class="contact-card" id="contact-github">
+                    <div class="contact-icon github-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                    </div>
+                    <h3>GitHub</h3>
+                    <p>github.com/anushkabhattarai</p>
+                </a>
+                <a href="mailto:anneushka017@gmail.com" class="contact-card" id="contact-email">
+                    <div class="contact-icon email-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+                    </div>
+                    <h3>Email</h3>
+                    <p>anneushka017@gmail.com</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Anushka Bhattarai. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
