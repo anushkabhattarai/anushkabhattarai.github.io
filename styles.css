@@ -420,6 +420,33 @@ a { color: inherit; text-decoration: none; }
 .project-card:hover .project-info h3 { color: var(--indigo); }
 .project-info p { font-size: .8rem; color: var(--text-secondary); line-height: 1.7; flex: 1; }
 
+/* Placeholder gradient + icon variant for projects without a real thumbnail */
+.project-image.project-placeholder {
+    display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(135deg, var(--pp-start, #6366f1), var(--pp-end, #8b5cf6));
+    position: relative;
+}
+.project-image.project-placeholder::before {
+    content: ''; position: absolute; inset: 0;
+    background:
+      radial-gradient(circle at 20% 20%, rgba(255,255,255,.18), transparent 45%),
+      radial-gradient(circle at 80% 85%, rgba(255,255,255,.12), transparent 40%);
+    pointer-events: none;
+}
+.project-image.project-placeholder svg.pp-icon {
+    width: 78px; height: 78px;
+    color: rgba(255,255,255,.95);
+    stroke-width: 1.4;
+    transition: transform .55s var(--ease);
+    position: relative; z-index: 1;
+}
+.project-card:hover .project-image.project-placeholder svg.pp-icon { transform: scale(1.12); }
+.pp-university  { --pp-start: #6366f1; --pp-end: #8b5cf6; }
+.pp-amazon      { --pp-start: #ff9f0a; --pp-end: #e97627; }
+.pp-sqlpython   { --pp-start: #4479a1; --pp-end: #3776ab; }
+.pp-creditcard  { --pp-start: #f2c811; --pp-end: #d97706; }
+.pp-pizza       { --pp-start: #ef4444; --pp-end: #991b1b; }
+
 /* ========================================
    EDUCATION — redesigned timeline-cards
    ======================================== */
